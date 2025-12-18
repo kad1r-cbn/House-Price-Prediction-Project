@@ -21,10 +21,10 @@ def load_and_preprocess_data():
     # Veri Seti Okuma
     # NOT: GitHub'da 'veri_setleri' klasörünün ve içindeki csv'lerin olduğundan emin ol!
     try:
-        test = pd.read_csv("test.csv")
-        train = pd.read_csv("train.csv")
+        test = pd.read_csv("veri_setleri/test.csv")
+        train = pd.read_csv("veri_setleri/train.csv")
     except FileNotFoundError:
-        st.error("CSV dosyaları bulunamadı. Lütfen 'veri_setleri/train.csv' ve 'test.csv' dosya yollarını kontrol et.")
+        st.error("CSV dosyaları bulunamadı. Lütfen 'veri_setleri/train.csv' ve 'veri_setleri/test.csv' dosya yollarını kontrol et.")
         return None, None, None
 
     df = pd.concat([train, test], axis=0).reset_index(drop=True)
@@ -187,4 +187,5 @@ if df is not None:
 
 else:
     st.stop()
+
 
