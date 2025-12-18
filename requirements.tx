@@ -5,5 +5,5 @@ seaborn
 numpy 
 pandas
 matplotlib.pyplot
-se
+sklearn
 
